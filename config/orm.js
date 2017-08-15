@@ -7,6 +7,7 @@ module.exports = {
     connection.query(query, [nameInput], function(err, result) {
       if (err) throw err;
       cb(result);
+      console.log(result);
     });
   },
   updateOne: function(tableInput, idInput, cb) {
@@ -14,6 +15,7 @@ module.exports = {
     connection.query(query, [idInput], function(err, result){
       if (err) throw err;
       cb(result);
+      console.log(result);
     });
   },
   selectAll: function(tableInput, cb){
@@ -21,6 +23,7 @@ module.exports = {
     connection.query(query, function(err, result){
       if (err) throw err;
       cb(result);
+      console.log(result);
     });
   }
 }
