@@ -1,7 +1,7 @@
 var connectionImport = require("./connection.js");
 var mysql = require("mysql");
 
-module.exports {
+module.exports = {
   insertOne: function(tableInput, nameInput, cb){
     var query = "INSERT INTO " + tableInput + " (burger_name) VALUES (?)";
     connection.query(query, [nameInput], function(err, result) {
