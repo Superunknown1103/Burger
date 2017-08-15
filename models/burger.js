@@ -8,6 +8,10 @@ var burgers = {
     orm.updateOne("burgers", inputId, cb);
   },
   findAll: function(cb) {
-    orm.selectAll("burgers")
+    orm.selectAll("burgers", function(res){
+      cb(res);
+    });
   }
-}
+};
+
+module.exports = burgers;
